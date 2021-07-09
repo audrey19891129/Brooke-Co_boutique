@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/login">
+    <fragment
+        android:id="@+id/login"
+        android:name="com.example.brookeandcoapp.Login"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_login_to_register"
+            app:destination="@id/register"
+            app:enterAnim="@anim/slide_bottom_up"
+            app:exitAnim="@anim/slide_up"
+            app:launchSingleTop="true" />
+        <action
+            android:id="@+id/action_login_to_index"
+            app:destination="@id/index"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/register"
+        android:name="com.example.brookeandcoapp.Register"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_register_to_login"
+            app:destination="@id/login"
+            app:enterAnim="@anim/slide_down"
+            app:exitAnim="@anim/slide_bottom_down"
+            app:launchSingleTop="false"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_register_to_registerConfirmation"
+            app:destination="@id/registerConfirmation" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerConfirmation"
+        android:name="com.example.brookeandcoapp.RegisterConfirmation"
+        android:label="fragment_register_confirmation"
+        tools:layout="@layout/fragment_register_confirmation" />
+    <fragment
+        android:id="@+id/index"
+        android:name="com.example.brookeandcoapp.Index"
+        android:label="fragment_index"
+        tools:layout="@layout/fragment_index" >
+        <action
+            android:id="@+id/action_index_to_categories_books"
+            app:destination="@id/categories_books"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_index_to_categories_games"
+            app:destination="@id/categories_games"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_index_to_categories_movies"
+            app:destination="@id/categories_movies"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_index_to_cart"
+            app:destination="@id/cart"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit" />
+        <action
+            android:id="@+id/action_index_to_emptyCart"
+            app:destination="@id/emptyCart" />
+        <action
+            android:id="@+id/action_index_to_accountInfos"
+            app:destination="@id/accountInfos" />
+    </fragment>
+    <fragment
+        android:id="@+id/categories_books"
+        android:name="com.example.brookeandcoapp.view.CategoriesBooks"
+        android:label="fragment_categories"
+        tools:layout="@layout/fragment_categories_books" >
+        <action
+            android:id="@+id/action_categories_books_to_prodcut_Layout_List"
+            app:destination="@id/prodcut_Layout_List"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/prodcut_Layout_List"
+        android:name="com.example.brookeandcoapp.view.Product_Layout_List"
+        android:label="fragment_prodcut__layout__list"
+        tools:layout="@layout/fragment_prodcut_layout_list" >
+        <action
+            android:id="@+id/action_prodcut_Layout_List_to_detail_book"
+            app:destination="@id/detail_book"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/fragment_fade_exit" />
+        <action
+            android:id="@+id/action_prodcut_Layout_List_to_detail_movie"
+            app:destination="@id/detail_movie"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/fragment_fade_exit" />
+        <action
+            android:id="@+id/action_prodcut_Layout_List_to_detail_game"
+            app:destination="@id/detail_game"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/fragment_fade_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/product_List"
+        android:name="com.example.brookeandcoapp.view.Product_List"
+        android:label="fragment_product__list"
+        tools:layout="@layout/fragment_product_list" >
+        <action
+            android:id="@+id/action_product_List_to_prodcut_Layout_List"
+            app:destination="@id/prodcut_Layout_List" />
+    </fragment>
+    <fragment
+        android:id="@+id/categories_games"
+        android:name="com.example.brookeandcoapp.view.CategoriesGames"
+        android:label="fragment_categories_games"
+        tools:layout="@layout/fragment_categories_games" >
+        <action
+            android:id="@+id/action_categories_games_to_prodcut_Layout_List"
+            app:destination="@id/prodcut_Layout_List"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/categories_movies"
+        android:name="com.example.brookeandcoapp.view.CategoriesMovies"
+        android:label="fragment_categories_movies"
+        tools:layout="@layout/fragment_categories_movies" >
+        <action
+            android:id="@+id/action_categories_movies_to_prodcut_Layout_List"
+            app:destination="@id/prodcut_Layout_List"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/detail_book"
+        android:name="com.example.brookeandcoapp.view.DetailBook"
+        android:label="fragment_detail_book"
+        tools:layout="@layout/fragment_detail_book" />
+    <fragment
+        android:id="@+id/detail_game"
+        android:name="com.example.brookeandcoapp.view.DetailGame"
+        android:label="fragment_detail_game"
+        tools:layout="@layout/fragment_detail_game" />
+    <fragment
+        android:id="@+id/detail_movie"
+        android:name="com.example.brookeandcoapp.view.DetailMovie"
+        android:label="fragment_detail_movie"
+        tools:layout="@layout/fragment_detail_movie" />
+    <fragment
+        android:id="@+id/cart"
+        android:name="com.example.brookeandcoapp.view.Cart_View"
+        android:label="fragment_cart"
+        tools:layout="@layout/fragment_cart" >
+        <action
+            android:id="@+id/action_cart_self"
+            app:destination="@id/cart" />
+        <action
+            android:id="@+id/action_cart_to_index"
+            app:destination="@id/index"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/fragment_fade_exit" />
+        <action
+            android:id="@+id/action_cart_to_detail_book"
+            app:destination="@id/detail_book"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/fragment_fade_exit" />
+        <action
+            android:id="@+id/action_cart_to_detail_movie"
+            app:destination="@id/detail_movie"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/fragment_fade_exit" />
+        <action
+            android:id="@+id/action_cart_to_detail_game"
+            app:destination="@id/detail_game"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/fragment_fade_exit" />
+        <action
+            android:id="@+id/action_cart_to_payPalCheckOut"
+            app:destination="@id/navigation" />
+    </fragment>
+    <fragment
+        android:id="@+id/cart_product_list"
+        android:name="com.example.brookeandcoapp.view.Cart_Product_List"
+        android:label="fragment_cart__product__list"
+        tools:layout="@layout/fragment_cart__product__list" >
+        <action
+            android:id="@+id/action_cart_product_list_to_cart"
+            app:destination="@id/cart" />
+    </fragment>
+    <fragment
+        android:id="@+id/emptyCart"
+        android:name="com.example.brookeandcoapp.EmptyCart"
+        android:label="fragment_empty_cart"
+        tools:layout="@layout/fragment_empty_cart" >
+        <action
+            android:id="@+id/action_emptyCart_to_index"
+            app:destination="@id/index" />
+    </fragment>
+    <navigation android:id="@+id/navigation"
+        app:startDestination="@id/payPalCheckOut">
+        <activity
+            android:id="@+id/payPalCheckOut"
+            android:name="com.example.brookeandcoapp.PayPalCheckOut"
+            android:label="activity_pay_pal_check_out"
+            tools:layout="@layout/activity_pay_pal_check_out" />
+        <action
+            android:id="@+id/action_global_paymentConfirm2"
+            app:destination="@id/paymentConfirm2" />
+    </navigation>
+    <activity
+        android:id="@+id/paymentConfirm2"
+        android:name="com.example.brookeandcoapp.PaymentConfirm"
+        android:label="activity_payment_confirm"
+        tools:layout="@layout/activity_payment_confirm" />
+    <fragment
+        android:id="@+id/accountInfos"
+        android:name="com.example.brookeandcoapp.AccountInfos"
+        android:label="fragment_account_infos"
+        tools:layout="@layout/fragment_account_infos" >
+        <action
+            android:id="@+id/action_accountInfos_to_order_entries"
+            app:destination="@id/order_entries" />
+    </fragment>
+    <fragment
+        android:id="@+id/order_entries"
+        android:name="com.example.brookeandcoapp.view.order_entries"
+        android:label="fragment_order_entries"
+        tools:layout="@layout/fragment_order_entries" >
+        <action
+            android:id="@+id/action_order_entries_to_detail_book"
+            app:destination="@id/detail_book" />
+        <action
+            android:id="@+id/action_order_entries_to_detail_game"
+            app:destination="@id/detail_game" />
+        <action
+            android:id="@+id/action_order_entries_to_detail_movie"
+            app:destination="@id/detail_movie" />
+    </fragment>
+</navigation>

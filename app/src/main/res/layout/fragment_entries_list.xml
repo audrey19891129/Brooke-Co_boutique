@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2303A9F4">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="115dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/imgEntry"
+            android:layout_width="96dp"
+            android:layout_height="108dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/txtEntryTitle"
+            android:layout_width="290dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="TitleTitleTitleTitleTitleTitleTitleTitle"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/imgEntry"
+            app:layout_constraintTop_toTopOf="@+id/imgEntry" />
+
+        <TextView
+            android:id="@+id/txtrandom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Quantite:"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="@+id/txtEntryTitle"
+            app:layout_constraintTop_toBottomOf="@+id/txtEntryTitle" />
+
+        <TextView
+            android:id="@+id/txtQuantEntry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="64dp"
+            android:text="Quantite:"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="@+id/txtEntryTitle"
+            app:layout_constraintTop_toTopOf="@+id/txtrandom" />
+
+        <TextView
+            android:id="@+id/txtrandom2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="Prix:"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/txtrandom" />
+
+        <TextView
+            android:id="@+id/txtPriceEntry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Prix:"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="@+id/txtQuantEntry"
+            app:layout_constraintTop_toTopOf="@+id/txtrandom2" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

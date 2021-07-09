@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.BrookeAndCoApp" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">#06d6a0</item>
+        <item name="colorPrimaryDark">#1BCDBC</item>
+        <item name="colorAccent">#2ec4b6</item>
+        <item name="android:buttonStyle">@style/Widget.AppCompat.Button.Colored</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+    </style>
+    <style name="ThemeBrookeAndCoApp" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">#06d6a0</item>
+        <item name="colorPrimaryDark">#1BCDBC</item>
+        <item name="colorAccent">#2ec4b6</item>
+        <item name="android:buttonStyle">@style/Widget.AppCompat.Button.Colored</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+    </style>
+    <style name="Theme.SplashScreen" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryDark">@color/white</item>
+        <item name="colorAccent">@color/white</item>
+        <item name="android:buttonStyle">@style/Widget.AppCompat.Button.Colored</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+    </style>
+</resources>
